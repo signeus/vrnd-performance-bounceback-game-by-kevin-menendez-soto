@@ -6,8 +6,14 @@ public class TrampolineMovement : MonoBehaviour
     public float moveSpeed;
     public float moveTime;
     private float time;
-																									
-	void Update()
+    private Rigidbody rb;
+
+    void Start()
+    {
+        rb = GetComponent<Rigidbody>();
+    }
+
+    void Update()
 	{
         time += Time.deltaTime;
         if(time > moveTime)
@@ -15,6 +21,6 @@ public class TrampolineMovement : MonoBehaviour
             time = 0;
             direction = direction * -1;
         }
-        transform.position += direction * Time.deltaTime * moveSpeed;
+        rb.position += direction * Time.deltaTime * moveSpeed;
 	}
 }
