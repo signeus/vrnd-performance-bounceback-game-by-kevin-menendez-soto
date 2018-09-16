@@ -31,5 +31,8 @@
 	- Models and Textures
 		- Udacity example of Rube Goldberg Game
 
+- Forward vs Deferred
+	- I choose Forward because support MSAA and I don't have semi-transparent objetcs and a lot of Realtime lights (everything is baked except directional lights)
+
 - Github
 	- [Signeus / Rube Goldberg Game](https://github.com/signeus/vrnd-performance-bounceback-game-by-kevin-menendez-soto)
